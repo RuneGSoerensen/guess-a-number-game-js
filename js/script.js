@@ -1,18 +1,19 @@
+// Starter spillet
 function startGame() {
-    // Initialiser booleansk variabel
+    // Boolean variabel
     let gameRunning = true;
 
     // Generer et tilfældigt tal mellem 0 og 100
     const targetNumber = Math.floor(Math.random() * 101);
 
-    // Hovedspilløkke
+    // Main spil loop
     while (gameRunning) {
         // Få brugerens gæt
         let userGuess = prompt("Gæt et tal mellem 0 og 100:");
 
-        // Tjek om inputtet er null (hvis brugeren annullerede) eller en tom streng
+        // Tjek om inputtet er null (hvis brugeren annullerede) eller en tom string
         if (userGuess === null || userGuess === "") {
-            alert("Spillet er slut. Tak fordi du legede med!");
+            alert("Spillet er slut. Tak fordi du spillede med!");
             gameRunning = false;
             break;
         }
